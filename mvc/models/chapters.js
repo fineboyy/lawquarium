@@ -14,7 +14,7 @@ const QuestionSchema  = new mongoose.Schema({
 })
 
 const chapterSchema = new mongoose.Schema({
-    id: {
+    number: {
         type: String,
         required: true,
         unique: true

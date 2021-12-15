@@ -10,36 +10,49 @@ getAllChapters = function (req, res, next) {
     })
 }
 
-getNewChapterForm = function (req, res, next) {
-    res.json({message: "Get New Chapter Form"})
+createNewChapter = function ({body}, res, next) {
+    const chapter = new Chapter()
+    chapter.name = body.name
+    chapter.number = body.number
+    chapter.questions = body.questions
+    chapter.save((err, savedChapter) => {
+        if(err) return res.json(err)
+        return res.json(savedChapter)
+    })
 }
 
-createNewChapter = function (req, res, next) {
-    res.json({message: "Create Chapter"})
+getChapter = function ({params}, res) {
+    Chapter.findOne({'number': params.chapter_number}).then(chapter => {
+        return res.json(chapter)
+    }).catch(err => {
+        return res.json(err)
+    })
 }
 
-getChapter = function (req, res, next) {
-    res.json({message: "Get one Chapter"})
+editChapter = function ({body}, res, next) {
+    Chapter.findOne({'number': params.chapter_number}).then(chapter => {
+        chapter = body.newChapter
+        chapter.save((err, savedChapter) => {
+            if(err) return res.json(err)
+            return res.json(savedChapter)
+        })
+
+    })
 }
 
-getEditChapterForm = function (req, res, next) {
-    res.json({message: "Get Edit Chapter Form"})
-}
-
-editChapter = function (req, res, next) {
-    res.json({message: "Edit Chapter"})
-}
-
-deleteChapter = function (req, res, next) {
-    res.json({message: "Delete Chapter"})
+deleteChapter = function ({params}, res, next) {
+    Chapter.findOne({'number': params.chapter_number}).then(chapter => {
+        chapter.remove()
+        return res.json({message: "Chapter Successfully deleted"})
+    }).catch(err => {
+        return res.json(err)
+    })
 }
 
 module.exports = {
     getAllChapters,
-    getNewChapterForm,
     createNewChapter,
     getChapter,
-    getEditChapterForm,
     editChapter,
     deleteChapter
 }

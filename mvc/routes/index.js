@@ -8,16 +8,9 @@ router.route('/chapters')
   .get(chaptersCtrl.getAllChapters)
   .post(chaptersCtrl.createNewChapter)
 
-
-router.route('/chapters/new')
-  .get(chaptersCtrl.getNewChapterForm)
-
-router.route('/chapters/:chapterid')
+router.route('/chapters/:chapter_number')
   .get(chaptersCtrl.getChapter)
   .put(chaptersCtrl.editChapter)
   .delete(chaptersCtrl.deleteChapter)
-
-router.route('/chapters/:chapterid/edit')
-  .get(chaptersCtrl.getEditChapterForm)
 
 module.exports = router;

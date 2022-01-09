@@ -1,0 +1,18 @@
+.Home {
+    background-color: rgb(239, 239, 245);
+}
+
+.container {
+    margin-top: 5em;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.chapters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
-    /* background-color: rgba(255, 251, 243, 0.8); */
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
@@ -84,7 +83,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 }
 
 img {
-    filter: brightness(120%);
+    filter: brightness(150%);
 }
 
 .text-area {

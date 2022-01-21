@@ -1,58 +1,62 @@
-.Navbar nav{
-  width: 100%;
+.header {
+  padding: 20px 100px 20px 100px;
   background-color: white;
-  box-shadow: -1px 2px 17px 3px rgba(172,179,177,0.72);
-}
-
-.Navbar nav div{
-  padding: 15px 0;
   display: flex;
   justify-content: space-between;
-  flex-shrink: shrink;
-}
-
-.header{
-  font-size: 2.5rem;
-  text-decoration: none;
-  padding-left: 2em;
-}
-.ezu{
-  color: black;
-}
-.ca{
-  color: rgb(62, 206, 158);
-}
-
-
-.Navbar nav div ul{
-  display: flex;
   align-items: center;
-
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
-.Navbar nav div ul li{
-  display: flex;
-  list-style: none;
-  margin: 0 1.5rem;
-}
-
-.Navbar nav div ul li a{
+.header .title a {
   text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFBE40;
+  font-family: 'Poppins';
 }
 
-.Navbar nav div ul li a:hover{
-  border-bottom: 3px solid rgb(62, 206, 158);
+.navlinks .nav-item {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #FFBE40;
+  transition: all 0.3s ease;
+  border-radius: 5%;
 }
-.hamburger{
-  display: none !important;
+.nav-item:hover {
+  background-color: rgba(252, 163, 29, 0.15)
 }
 
-.fa-clipboard{
-  color: black;
-  font-size: 1.1rem;
+.onboarding-buttons * {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.login-button {
+  text-decoration: none;
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  color: #FFBE40;
+  
+}
+
+.login-button:hover {
+  background-color: rgba(252, 163, 29, 0.15);
+}
+
+.sign-up-button {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg,#D49E35, #FFBE40);
+  font-weight: bold;
+}
+
+.sign-up-button:hover {
+  background: linear-gradient(90deg,#FFBE40, #D49E35);
+  color: white;
 }

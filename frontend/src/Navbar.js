@@ -1,25 +1,29 @@
 import React, { Component } from 'react'
 import './Navbar.css'
 
+import { Navigate, Link } from 'react-router-dom'
+
 export class Navbar extends Component {
   render() {
     return (
-      <div className='Navbar'>
-          <nav>
-        <div class="spaced">
-          <a href="#" class="header"><span class="ezu">Answer</span><span class="ca">ium</span></a>
-          <ul>
-            <li class="nav-item"><a href="#" class="active">Home</a></li>
-            <li class="nav-item"><a href="#">About</a></li>
-            <li class="nav-item"><a href="#">Courses</a></li>
-            <li class="nav-item"><a href="#">Blog</a></li>
-            <li class="nav-item"><a href="#">Contact</a></li>
-            <li class="hamburger"><a href="#"><i class="fa fa-bars"></i></a></li>
-            <li><a href="#"></a><i class="far fa-clipboard"></i></li>
-          </ul>
+      <header className="header">
+        <div className="title">
+          <i className="fas fa-man"></i>
+          <Link to="/">LawQuarium</Link>
         </div>
-      </nav>
-      </div>
+
+        <div className="navlinks">
+          <Link to="/" className="nav-item">Questions</Link>
+          <Link to="/" className="nav-item">Students</Link>
+          <Link to="/" className="nav-item">Community</Link>
+          <Link to="/" className="nav-item">About us</Link>
+        </div>
+
+        <div className="onboarding-buttons">
+          <Link to="/login" className="login-button">Login</Link>
+          <Link to="signup" className="sign-up-button">Sign Up</Link>
+        </div>
+      </header>
     )
   }
 }

@@ -31,7 +31,7 @@
 }
 
 .Login-form h1 {
-    color: #D49E35;
+    color: #f7cb74;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -45,7 +45,7 @@
 }
 
 .center-form hr {
-    border: 2px solid #D49E35;
+    border: 2px solid #f7cb74;
     opacity: 1;
     border-radius: 19px;
     width: 15%;
@@ -53,13 +53,55 @@
     margin-right: auto;
     margin-top: 0.3rem;
     margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.Login-form input {
+.center-form span * {
+    font-size: 0.8rem;
+}
+
+.center-form .parent-span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.center-form .sign-up {
+    text-decoration: none;
+    margin-top: 2rem;
+    padding: 5px 20px;
+    border: 2px solid #f7cb74;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #FFBE40;
+}
+
+.Login-form .input-field {
     border: 1px solid #f7cb74;
     padding: 4px 15px;
     border-radius: 1%;
+    margin: 0.5rem;
+
+}
+
+.input-field label {
+ color: #D49E35;
+}
+
+.input-field input {
+    border: none;
     margin: 0;
+    width: max-content;
+}
+
+.input-field input:focus {
+    border: none;
 }
 
 .Login-form-container-right {

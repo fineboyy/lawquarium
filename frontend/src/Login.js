@@ -45,14 +45,32 @@ export class Login extends Component {
 
                         <div className='center-form'>
                             <h1>Sign in to Account</h1>
-                        <hr />
+                            <hr />
 
-                            <label htmlFor="email">Email</label>
-                            <input type="text" placeholder='eg. maqweku@gmail.com' name='email' />
+                            <div className='input-field'>
+                                <label htmlFor="email">
+                                    <i className='fas fa-envelope'>Email</i>
+                                </label>
+                                <input type="text" name='email' />
+                            </div>
 
-                            <label htmlFor="email">Password</label>
-                            <input type="password" placeholder='at least 8 characters' name='password' />
+                            <div className='input-field'>
+                                <label htmlFor="email">
+                                    <i className='fas fa-envelope'>Password</i>
+                                </label>
+                                <input type="password" name='password' />
+                            </div>
+                            <div>
+                                <span className='parent-span'>
+                                    <input type='checkbox' />
+                                    <span>Remember me</span>
+                                    <span>Forgot password?</span>
+                                </span>
+                            </div>  
+
+                            <Link to='/signup' className='sign-up'>Login</Link>
                         </div>
+                        <img src="book.jpg" alt="A child carrying a book on their head" />
                     </form>
                     <div className='Login-form-container-right'>
                         <h1 className='first time'>First time?</h1>
